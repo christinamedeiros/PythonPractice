@@ -1,4 +1,4 @@
-# 
+#
 # words = ['cat', 'frog', 'snake','something']
 # for w in words:
 #     print (w, len(w))
@@ -16,14 +16,16 @@ for i in range(len(rhym)):
 
 
 
-
+#calling on weather data API
 URL = "http://api.openweathermap.org/data/2.5/forecast/daily?q=Boston&units=imperial&cnt=10&appid=f5f76fc80be1dfc220492acb706cb7e3"
 import requests
 response= requests.get(URL)
 data= response.json()
+#printing
 # import pprint
 # pprint.pprint(data)
 
+#Pulling Boston weather data and outputing 10 day forecast
 day_list= data['list']
 for day in day_list:
     #prints temp for each day
